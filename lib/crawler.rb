@@ -8,7 +8,7 @@ class Crawler
   end
 
   def document
-    @document ||= Nokogiri::HTML(open(url))
+    @document ||= load_url
   end
 
   def links
@@ -24,5 +24,11 @@ class Crawler
         { type: tag, content: tag_html.text }
       end
     end.flatten
+  end
+
+  private
+
+  def load_url
+    Nokogiri::HTML(open(url)) rescue nil
   end
 end

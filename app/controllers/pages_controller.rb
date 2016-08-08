@@ -27,8 +27,11 @@ class PagesController < ApplicationController
 
   def index_page_content
     crawler = Crawler.new(@page.url)
-    @page.links.create(crawler.links)
-    @page.tags.create(crawler.tags)
+
+    if crawler.document.present?
+      @page.links.create(crawler.links)
+      @page.tags.create(crawler.tags)
+    end
   end
 
   def include_associations?
