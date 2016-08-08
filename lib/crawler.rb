@@ -13,7 +13,8 @@ class Crawler
 
   def links
     document.css('a').map do |link|
-      { href: link.attr('href') }
+      href = link.attr('href') =~ URI.regexp ? link.attr('href') : url + link.attr('href')
+      { href: href }
     end
   end
 
