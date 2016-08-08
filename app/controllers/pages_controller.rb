@@ -33,8 +33,4 @@ class PagesController < ApplicationController
       @page.tags.create(crawler.tags)
     end
   end
-
-  def include_associations?
-    false
-  end
 end
