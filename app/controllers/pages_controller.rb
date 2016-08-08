@@ -10,6 +10,11 @@ class PagesController < ApplicationController
     end
   end
 
+  def show
+    @page = Page.includes(:links, :tags).find(params[:id])
+    render json: @page, include_associations: true
+  end
+
   private
 
   def page_params
@@ -20,5 +25,9 @@ class PagesController < ApplicationController
     crawler = Crawler.new(@page.url)
     @page.links.create(crawler.links)
     @page.tags.create(crawler.tags)
+  end
+
+  def include_associations?
+    false
   end
 end
