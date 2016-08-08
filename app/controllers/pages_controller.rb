@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  def index
+    render json: Page.all
+  end
+
   def create
     @page = Page.new(page_params)
 
