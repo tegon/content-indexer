@@ -122,6 +122,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   listen (~> 3.0.5)
+  nokogiri (= 1.6.8)
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.0)
