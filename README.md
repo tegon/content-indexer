@@ -1,8 +1,6 @@
 # content-indexer
 Indexes tags and links of a given webpage
 
-------------------
-
 ## API endpoints
 
 ### POST pages
@@ -10,7 +8,7 @@ This endpoint accepts a url parameter, which is the page were the content will b
 
 Curl Example:
 ```bash
-curl "http://localhost:3000/pages" -d "page[url]='https://tegon.github.io'"
+curl "http://localhost:3000/pages" -d "page[url]=https://tegon.github.io"
 ```
 
 The page will be stored in the database, and his id will be returned
