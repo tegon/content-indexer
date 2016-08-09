@@ -43,3 +43,6 @@ bower.json
 
 # OS X
 .DS_Store
+
+# rspec example status file
+spec/examples.txt

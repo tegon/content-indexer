@@ -1,8 +1,0 @@
-example_id                        | status | run_time        |
---------------------------------- | ------ | --------------- |
-./spec/models/page_spec.rb[1:1:1] | passed | 0.00347 seconds |
-./spec/models/page_spec.rb[1:1:2] | passed | 0.00693 seconds |
-./spec/models/page_spec.rb[1:1:3] | passed | 0.00212 seconds |
-./spec/models/page_spec.rb[1:1:4] | passed | 0.00331 seconds |
-./spec/models/page_spec.rb[1:2:1] | passed | 0.00187 seconds |
-./spec/models/page_spec.rb[1:2:2] | passed | 0.00203 seconds |
