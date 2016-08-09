@@ -27,7 +27,7 @@ RSpec.describe PagesController do
       allow_any_instance_of(Crawler).to receive(:document).and_return(document)
       page_params = { url: 'https://tegon.github.io' }
 
-      post :create, params: { page: page_params }
+      expect { post :create, params: { page: page_params } }.to change{ Page.count }.by(1)
 
       expect(response).to be_success
     end
