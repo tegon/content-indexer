@@ -13,6 +13,14 @@ gem 'active_model_serializers', '~> 0.10.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '3.5.1'
+  gem 'factory_girl_rails', '4.7.0'
+end
+
+group :test do
+  gem 'database_cleaner', '1.5.3'
+  gem 'faker', '1.6.6'
+  gem 'shoulda-matchers', '3.1.1'
 end
 
 group :development do
